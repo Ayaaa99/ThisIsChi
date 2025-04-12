@@ -1,13 +1,14 @@
 :root {
   /* Theme Colors */
-  --primary-bg: #1a1a2e;
-  --secondary-bg: #16213e;
-  --accent-color: #4CAF50;
-  --text-color: #ffffff;
+  --primary-bg: #4b5cc4;
+  --accent-color: #d7eff1;
+  --text-bright: #ffffff;
+  --text-dark: #000000;
   --card-bg: #ffffff;
   --card-shadow: rgba(0,0,0,0.1);
-  --button-bg: #282c34;
-  --button-hover: #3b4252;
+  --button-bg: #f5e65c;
+  --button-dark: #eca820;
+  --button-hover: #B9E5E8;
 }
 
 .App {
@@ -16,8 +17,9 @@
 
 .App-header {
   background-color: var(--primary-bg);
+  opacity: 0.9;
   padding: 0.5rem 1rem;
-  color: var(--text-color);
+  color: var(--text-bright);
   position: fixed;
   width: 100%;
   top: 0;
@@ -52,6 +54,7 @@
 
 .nav-link:hover {
   background-color: var(--button-hover);
+  color: var(--text-dark);
 }
 
 main {
@@ -61,7 +64,7 @@ main {
 }
 
 .section {
-  padding: 8rem 2rem;
+  padding: 5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -98,9 +101,13 @@ main {
 }
 
 .title {
-  color: #666;
+  color: var(--primary-bg);
   font-size: 1.2rem;
   margin-bottom: 1rem;
+}
+
+.skills {
+  margin-top: 2rem;
 }
 
 .skills-grid {
@@ -111,7 +118,7 @@ main {
 }
 
 .skill-tag {
-  background-color: #e0e0e0;
+  background-color: var(--accent-color);
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.9rem;
@@ -160,7 +167,7 @@ main {
 }
 
 .tech-tag {
-  background-color: #e0e0e0;
+  background-color: var(--accent-color);
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.9rem;
@@ -169,9 +176,10 @@ main {
 .project-link {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: var(--button-bg);
-  color: var(--text-color);
+  background-color: var(--primary-bg);
+  color: var(--text-bright);
   text-decoration: none;
+  border: none;
   border-radius: 4px;
   margin-top: 0.5rem;
   transition: background-color 0.3s;
@@ -180,6 +188,7 @@ main {
 
 .project-link:hover {
   background-color: var(--button-hover);
+  color: var(--text-dark);
 }
 
 /* Contact Section Styles */
@@ -248,7 +257,7 @@ main {
 }
 
 .submit-btn {
-  background-color: #282c34;
+  background-color: var(--primary-bg);
   color: white;
   padding: 0.8rem 2rem;
   border: none;
@@ -259,13 +268,14 @@ main {
 }
 
 .submit-btn:hover {
-  background-color: #3b4252;
+  background-color: var(--button-hover);
+  color: var(--text-dark);
 }
 
 .resume-link {
-  background-color: #4CAF50;
-  color: white;
-  padding: 1rem;
+  background-color: var(--button-bg);
+  color: var(--primary-bg);
+  padding: 0.5rem;
   border-radius: 4px;
   display: inline-flex;
   align-items: center;
@@ -276,7 +286,8 @@ main {
 }
 
 .resume-link:hover {
-  background-color: #45a049;
+  background-color: var(--button-dark);
+  color: var(--text-white)
 }
 
 .resume-link i {
@@ -299,6 +310,13 @@ main {
   .profile-image {
     width: 200px;
     height: 200px;
+    border-radius: 50%;
+  }
+
+  .image-placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
   }
 
   .profile-info {
@@ -440,8 +458,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--secondary-bg);
-  color: var(--text-color);
+  background-color: var(--primary-bg);
+  color: var(--text-bright);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -516,4 +534,4 @@ main {
   100% {
     width: 100%;
   }
-} 
+}

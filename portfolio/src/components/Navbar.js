@@ -5,26 +5,31 @@ function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const [isVisible, setIsVisible] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Get the height of the viewport
+      const currentScrollY = window.scrollY;
       const viewportHeight = window.innerHeight;
-      // Get the current scroll position
-      const scrollPosition = window.scrollY;
-      
-      // Show navbar when scrolled past 80% of the viewport height
-      setIsVisible(scrollPosition > viewportHeight * 0.8);
+
+      if (currentScrollY > lastScrollY && currentScrollY > viewportHeight * 0.8) {
+        // Scrolling down
+        setIsVisible(true);
+      } else {
+        // Scrolling up
+        setIsVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []); // Empty dependency array means the effect only runs once on mount
+  }, [lastScrollY]); // Dependency array includes lastScrollY
 
   const handleNavClick = (section) => {
     if (location.pathname !== '/') {
       navigate('/');
-      // Wait for navigation to complete before scrolling
       setTimeout(() => {
         const element = document.getElementById(section);
         if (element) {
@@ -41,7 +46,6 @@ function Navbar() {
 
   return (
     <header className={`App-header ${isVisible ? 'show' : 'hide'}`}>
-      <h1>Chi Zhang</h1>
       <nav className="nav-menu">
         <button className="nav-link" onClick={() => handleNavClick('about')}>
           About
@@ -53,11 +57,11 @@ function Navbar() {
           Contact
         </button>
         <a href="/resume.pdf" download className="resume-link">
-          <i className="fas fa-download"></i> Resume
+          Resume
         </a>
       </nav>
     </header>
   );
 }
 
-export default Navbar; 
+export default Navbar;
