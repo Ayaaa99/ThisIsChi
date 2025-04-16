@@ -11,14 +11,17 @@ function ProjectOne() {
       </button>
       
       <div className="project-content">
-        <h1>Project One</h1>
+        <h1>UC Social Den</h1>
         <div className="project-header">
           <div className="project-image">
-            <div className="image-placeholder"></div>
+            <img src="/path-to-your-image/uc-social-den.jpg" alt="UC Social Den" className="project-image" />
           </div>
           <div className="project-overview">
             <h2>Overview</h2>
-            <p>A brief description of your first project. Explain what it does and what makes it special.</p>
+            <p>
+              UC Social Den is a campus social platform for UCSD students to create, join, and engage with events. 
+              It fosters student connections and supports on-campus event organization with a secure and user-friendly interface.
+            </p>
             <div className="project-technologies">
               <span className="tech-tag">React</span>
               <span className="tech-tag">Node.js</span>
@@ -31,20 +34,26 @@ function ProjectOne() {
           <section>
             <h2>Features</h2>
             <ul>
-              <li>Feature 1 description</li>
-              <li>Feature 2 description</li>
-              <li>Feature 3 description</li>
+              <li>Implemented event detail pages and interactive join functionality with real-time feedback.</li>
+              <li>Designed responsive UI/UX for both mobile and desktop, resolving layout and feedback issues.</li>
+              <li>Delivered a secure platform supporting on-campus event organization.</li>
             </ul>
           </section>
 
           <section>
             <h2>Technical Details</h2>
-            <p>Explain the technical implementation, architecture, and any interesting challenges you faced.</p>
+            <p>
+              The platform was built using React for the frontend, Node.js for the backend, and MongoDB for the database. 
+              It features real-time feedback using WebSocket integration and a responsive design for seamless user experience 
+              across devices.
+            </p>
           </section>
 
           <section>
             <h2>Demo</h2>
-            <p>If you have a live demo, you can embed it here or provide a link.</p>
+            <p>
+              Check out the project on <a href="https://github.com/Ayaaa99/UCSocialDen" target="_blank" rel="noopener noreferrer">GitHub</a>.
+            </p>
           </section>
         </div>
       </div>
@@ -52,4 +61,4 @@ function ProjectOne() {
   );
 }
 
-export default ProjectOne; 
+export default ProjectOne;

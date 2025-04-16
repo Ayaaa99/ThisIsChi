@@ -11,18 +11,22 @@ function ProjectThree() {
       </button>
       
       <div className="project-content">
-        <h1>Project Three</h1>
+        <h1>Palm & Prophecy</h1>
         <div className="project-header">
           <div className="project-image">
-            <div className="image-placeholder"></div>
+            <img src="/path-to-your-image/palm-and-prophecy.jpg" alt="Palm & Prophecy" className="project-image" />
           </div>
           <div className="project-overview">
             <h2>Overview</h2>
-            <p>A brief description of your third project. Explain what it does and what makes it special.</p>
+            <p>
+              Palm & Prophecy is a fortune-telling website featuring palm reading, fortune cookies, and zodiac matching. 
+              It provides an interactive and fun experience for users, combining creative design with engaging functionality.
+            </p>
             <div className="project-technologies">
-              <span className="tech-tag">React</span>
-              <span className="tech-tag">Express</span>
-              <span className="tech-tag">PostgreSQL</span>
+              <span className="tech-tag">HTML</span>
+              <span className="tech-tag">CSS</span>
+              <span className="tech-tag">JavaScript</span>
+              <span className="tech-tag">Figma</span>
             </div>
           </div>
         </div>
@@ -31,20 +35,28 @@ function ProjectThree() {
           <section>
             <h2>Features</h2>
             <ul>
-              <li>Feature 1 description</li>
-              <li>Feature 2 description</li>
-              <li>Feature 3 description</li>
+              <li>Designed a user-focused website prototype and interactive UI in Figma.</li>
+              <li>Built the palm-reading page structure in HTML and CSS with a teammate.</li>
+              <li>Created a JavaScript function for random fortune generation, adding interactivity.</li>
+              <li>Included zodiac matching and fortune cookie features for a complete experience.</li>
             </ul>
           </section>
 
           <section>
             <h2>Technical Details</h2>
-            <p>Explain the technical implementation, architecture, and any interesting challenges you faced.</p>
+            <p>
+              The website was designed with a focus on user experience, starting with a prototype in Figma. 
+              The frontend was implemented using HTML, CSS, and JavaScript, with interactive features like 
+              random fortune generation and zodiac matching. The project was recognized as one of the top 5 
+              winning teams out of 20 in the course.
+            </p>
           </section>
 
           <section>
             <h2>Demo</h2>
-            <p>If you have a live demo, you can embed it here or provide a link.</p>
+            <p>
+              Check out the project on <a href="https://github.com/Ayaaa99/fortune-teller" target="_blank" rel="noopener noreferrer">GitHub</a>.
+            </p>
           </section>
         </div>
       </div>
@@ -52,4 +64,4 @@ function ProjectThree() {
   );
 }
 
-export default ProjectThree; 
+export default ProjectThree;

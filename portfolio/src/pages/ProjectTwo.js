@@ -11,18 +11,21 @@ function ProjectTwo() {
       </button>
       
       <div className="project-content">
-        <h1>Project Two</h1>
+        <h1>AI Taylor Swift Lyrics Generator</h1>
         <div className="project-header">
           <div className="project-image">
-            <div className="image-placeholder"></div>
+            <img src="/path-to-your-image/ai-lyrics-generator.jpg" alt="AI Lyrics Generator" className="project-image" />
           </div>
           <div className="project-overview">
             <h2>Overview</h2>
-            <p>A brief description of your second project. Explain what it does and what makes it special.</p>
+            <p>
+              This project is a machine learning model designed to generate song lyrics in Taylor Swift’s style. 
+              It uses a GPT-2-like transformer to create creative and nuanced lyrics, achieving stylistic accuracy.
+            </p>
             <div className="project-technologies">
-              <span className="tech-tag">React</span>
-              <span className="tech-tag">Firebase</span>
-              <span className="tech-tag">Tailwind CSS</span>
+              <span className="tech-tag">Python</span>
+              <span className="tech-tag">PyTorch</span>
+              <span className="tech-tag">GPT-2</span>
             </div>
           </div>
         </div>
@@ -31,20 +34,26 @@ function ProjectTwo() {
           <section>
             <h2>Features</h2>
             <ul>
-              <li>Feature 1 description</li>
-              <li>Feature 2 description</li>
-              <li>Feature 3 description</li>
+              <li>Preprocessed a dataset of Taylor Swift’s lyrics using GPT-2 subword tokenization.</li>
+              <li>Built and trained a GPT-2-like transformer, optimizing hyperparameters for stylistic accuracy.</li>
+              <li>Generated creative, nuanced lyrics, achieving a project score of 96/100.</li>
             </ul>
           </section>
 
           <section>
             <h2>Technical Details</h2>
-            <p>Explain the technical implementation, architecture, and any interesting challenges you faced.</p>
+            <p>
+              The model was built using PyTorch and GPT-2 architecture. It preprocesses lyrics using subword tokenization 
+              for better performance over character-level tokenization. The training process involved optimizing hyperparameters 
+              to ensure the generated lyrics closely match Taylor Swift’s style.
+            </p>
           </section>
 
           <section>
             <h2>Demo</h2>
-            <p>If you have a live demo, you can embed it here or provide a link.</p>
+            <p>
+              Check out the project on <a href="https://github.com/Ayaaa99/AI_TSlyrics_generator" target="_blank" rel="noopener noreferrer">GitHub</a>.
+            </p>
           </section>
         </div>
       </div>
@@ -52,4 +61,4 @@ function ProjectTwo() {
   );
 }
 
-export default ProjectTwo; 
+export default ProjectTwo;

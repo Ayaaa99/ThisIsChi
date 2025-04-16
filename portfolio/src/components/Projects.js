@@ -7,28 +7,28 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "“UC Social Den” - UCSD Student Social Platform",
-      description: "A brief description of your first project",
+      title: "UC Social Den",
+      description: "A campus social platform for UCSD students to create, join, and engage with events.",
       technologies: ["React", "Node.js", "MongoDB"],
-      image: "project1.jpg",
-      path: "/project-one"
+      image: "uc-social-den.jpg", // Replace with the actual image file name
+      path: "/project-one", // Match the route in App.js
     },
     {
       id: 2,
-      title: "Project Two",
-      description: "A brief description of your second project",
-      technologies: ["React", "Firebase", "Tailwind CSS"],
-      image: "project2.jpg",
-      path: "/project-two"
+      title: "AI Taylor Swift Lyrics Generator",
+      description: "A machine learning model to generate song lyrics in Taylor Swift’s style.",
+      technologies: ["Python", "PyTorch", "GPT-2"],
+      image: "ai-lyrics-generator.jpg", // Replace with the actual image file name
+      path: "/project-two", // Match the route in App.js
     },
     {
       id: 3,
-      title: "Project Three",
-      description: "A brief description of your third project",
-      technologies: ["React", "Express", "PostgreSQL"],
-      image: "project3.jpg",
-      path: "/project-three"
-    }
+      title: "Palm & Prophecy",
+      description: "A fortune-telling website with palm reading, fortune cookies, and zodiac matching.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      image: "palm-and-prophecy.jpg", // Replace with the actual image file name
+      path: "/project-three", // Match the route in App.js
+    },
   ];
 
   const handleProjectClick = (path) => {
@@ -42,9 +42,7 @@ function Projects() {
       <div className="projects-grid">
         {projects.map(project => (
           <div key={project.id} className="project-card">
-            <div className="project-image">
-              <div className="image-placeholder"></div>
-            </div>
+            <img src={project.image} alt="project image picture" className="project-card-image" />
             <div className="project-content">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
@@ -67,4 +65,4 @@ function Projects() {
   );
 }
 
-export default Projects; 
+export default Projects;

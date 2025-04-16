@@ -81,16 +81,14 @@ main {
   text-align: left;
 }
 
-.profile-image {
-  flex: 0 0 300px;
+.profile-img {
+  width: 300px; /* Adjust size as needed */
+  height: 300px; /* Ensure width and height are equal for a circular shape */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image fits within the circle */
+  border: 2px solid var(--accent-color); /* Optional: Add a border */
 }
 
-.image-placeholder {
-  width: 100%;
-  height: 300px;
-  background-color: #e0e0e0;
-  border-radius: 50%;
-}
 
 .profile-text {
   flex: 1;
@@ -144,11 +142,6 @@ main {
 
 .project-card:hover {
   transform: translateY(-5px);
-}
-
-.project-image {
-  height: 150px;
-  flex-shrink: 0;
 }
 
 .project-content {
@@ -307,18 +300,6 @@ main {
     text-align: center;
   }
 
-  .profile-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-  }
-
-  .image-placeholder {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-  }
-
   .profile-info {
     max-width: 100%;
   }
@@ -329,11 +310,6 @@ main {
 
   .project-card {
     flex-direction: column;
-  }
-
-  .project-image {
-    width: 100%;
-    height: 200px;
   }
 
   .project-content {
@@ -352,11 +328,6 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .project-image-large {
-    width: 100%;
-    height: auto;
-  }
-
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -372,7 +343,7 @@ main {
 }
 
 .back-button {
-  background-color: #282c34;
+  background-color: var(--primary-bg);
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -403,18 +374,6 @@ main {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-bottom: 3rem;
-}
-
-.project-image {
-  width: 100%;
-  height: 300px;
-}
-
-.project-image .image-placeholder {
-  width: 100%;
-  height: 100%;
-  background-color: #e0e0e0;
-  border-radius: 8px;
 }
 
 .project-overview {
@@ -535,3 +494,4 @@ main {
     width: 100%;
   }
 }
+
