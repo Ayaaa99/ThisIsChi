@@ -7,7 +7,7 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Project One",
+      title: "“UC Social Den” - UCSD Student Social Platform",
       description: "A brief description of your first project",
       technologies: ["React", "Node.js", "MongoDB"],
       image: "project1.jpg",
