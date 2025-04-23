@@ -23,6 +23,7 @@ function About() {
                 <span className="skill-tag">PyTorch</span>
                 <span className="skill-tag">Node.js</span>
                 <span className="skill-tag">MySQL</span>
+                <span className="skill-tag">Go</span>
                 <span className="skill-tag">C/C++</span>
                 <span className="skill-tag">Java</span>
                 <span className="skill-tag">JavaScript</span>

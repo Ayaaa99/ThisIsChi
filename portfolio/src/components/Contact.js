@@ -1,6 +1,30 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_ss2kbna', // Replace with your EmailJS service ID
+        'template_ri2oxpk', // Replace with your EmailJS template ID
+        form.current,
+        'nrnFredPaCDrzweyV' // Replace with your EmailJS public API key
+      )
+      .then(
+        (result) => {
+          alert('Message sent successfully!');
+          form.current.reset(); // Clear the form fields
+        },
+        (error) => {
+          alert('Failed to send message. Please try again.');
+        }
+      );
+  };
+
   return (
     <section id="contact" className="section">
       <h2>Contact Me</h2>
@@ -8,42 +32,39 @@ function Contact() {
         <div className="contact-container">
           <div className="contact-info">
             <h3>Get in Touch</h3>
-            <p>I'm always interested in hearing about new projects and opportunities.</p>
+            <p>I'm always interested in hearing about new projects and job opportunities.</p>
             <div className="contact-details">
               <div className="contact-item">
                 <i className="fas fa-envelope"></i>
-                <p>your.email@example.com</p>
+                <p>chz011@ucsd.edu</p>
               </div>
               <div className="contact-item">
                 <i className="fas fa-phone"></i>
-                <p>+1 (234) 567-8900</p>
+                <p>+1 (858) 281-1938</p>
               </div>
               <div className="contact-item">
                 <i className="fas fa-map-marker-alt"></i>
-                <p>Your Location</p>
+                <p>San Diego, CA</p>
               </div>
             </div>
             <div className="social-links">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Ayaaa99" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github"></i>
               </a>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/chi-zhang-6904a3257/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-linkedin"></i>
-              </a>
-              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-twitter"></i>
               </a>
             </div>
           </div>
-          <form className="contact-form">
+          <form ref={form} onSubmit={sendEmail} className="contact-form">
             <div className="form-group">
-              <input type="text" placeholder="Your Name" required />
+              <input type="text" name="user_name" placeholder="Your Name" required />
             </div>
             <div className="form-group">
-              <input type="email" placeholder="Your Email" required />
+              <input type="email" name="user_email" placeholder="Your Email" required />
             </div>
             <div className="form-group">
-              <textarea placeholder="Your Message" required></textarea>
+              <textarea name="message" placeholder="Your Message" required></textarea>
             </div>
             <button type="submit" className="submit-btn">Send Message</button>
           </form>
@@ -53,4 +74,4 @@ function Contact() {
   );
 }
 
-export default Contact; 
+export default Contact;
