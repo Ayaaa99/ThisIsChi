@@ -14,7 +14,7 @@ function ProjectOne() {
         <h1>UC Social Den</h1>
         <div className="project-header">
           <div className="project-image">
-            <img src="/path-to-your-image/uc-social-den.jpg" alt="UC Social Den" className="project-image" />
+            <img src="uc-social-den.jpg" alt="UC Social Den" className="project-image" />
           </div>
           <div className="project-overview">
             <h2>Overview</h2>

@@ -14,7 +14,7 @@ function ProjectTwo() {
         <h1>AI Taylor Swift Lyrics Generator</h1>
         <div className="project-header">
           <div className="project-image">
-            <img src="/path-to-your-image/ai-lyrics-generator.jpg" alt="AI Lyrics Generator" className="project-image" />
+            <img src="ai-lyrics-generator.jpg" alt="AI Lyrics Generator" className="project-image" />
           </div>
           <div className="project-overview">
             <h2>Overview</h2>

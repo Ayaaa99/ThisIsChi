@@ -26,7 +26,7 @@ function Projects() {
       title: "Palm & Prophecy",
       description: "A fortune-telling website with palm reading, fortune cookies, and zodiac matching.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      image: "palm-and-prophecy.jpg", // Replace with the actual image file name
+      image: "palm-and-prophecy.png", // Replace with the actual image file name
       path: "/project-three", // Match the route in App.js
     },
   ];

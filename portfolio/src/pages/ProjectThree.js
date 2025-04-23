@@ -14,7 +14,7 @@ function ProjectThree() {
         <h1>Palm & Prophecy</h1>
         <div className="project-header">
           <div className="project-image">
-            <img src="/path-to-your-image/palm-and-prophecy.jpg" alt="Palm & Prophecy" className="project-image" />
+            <img src="palm-and-prophecy.png" alt="Palm & Prophecy" className="project-image" />
           </div>
           <div className="project-overview">
             <h2>Overview</h2>
@@ -54,6 +54,14 @@ function ProjectThree() {
 
           <section>
             <h2>Demo</h2>
+            <div className="demo-window">
+              <iframe 
+                src="https://cse110-sp23-group20.github.io/fortune-teller/source/home-page/" 
+                title="UC Social Den Demo" 
+                className="demo-iframe"
+                allowFullScreen
+              ></iframe>
+            </div>
             <p>
               Check out the project on <a href="https://github.com/Ayaaa99/fortune-teller" target="_blank" rel="noopener noreferrer">GitHub</a>.
             </p>
