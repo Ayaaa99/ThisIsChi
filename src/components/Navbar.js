@@ -56,9 +56,6 @@ function Navbar() {
         <button className="nav-link" onClick={() => handleNavClick('contact')}>
           Contact
         </button>
-        <a href="/resume.pdf" download className="resume-link">
-          Resume
-        </a>
       </nav>
     </header>
   );

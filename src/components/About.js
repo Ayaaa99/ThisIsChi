@@ -6,7 +6,7 @@ function About() {
       <h2>About Me</h2>
       <div className="about-content">
         <div className="profile-container">
-          <img src="/profile.jpg" alt="Chi Zhang" className="profile-img" />
+          <img src="/profile_image.jpg" alt="Chi Zhang" className="profile-img" />
           <div className="profile-text">
             <h3>Hello, I'm Chi Zhang</h3>
             <p className="title">Full Stack Developer & UIUX Designer</p>
@@ -15,6 +15,11 @@ function About() {
               I am currently pursuing a Master of Science in Computer Engineering at the University of California, San Diego, 
               with a strong foundation in both Computer Engineering and Cognitive Science Design & Interaction.
             </p>
+
+            <a href="/resume.pdf" download className="resume-btn">
+              Resume
+            </a>
+
             <div className="skills">
               <h4>Skills</h4>
               <div className="skills-grid">

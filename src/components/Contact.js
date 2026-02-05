@@ -12,7 +12,7 @@ function Contact() {
         'service_ss2kbna', // Replace with your EmailJS service ID
         'template_ri2oxpk', // Replace with your EmailJS template ID
         form.current,
-        'nrnFredPaCDrzweyV' // Replace with your EmailJS public API key
+        'ujhogLjhcCY_Iu3Xa' // Replace with your EmailJS public API key
       )
       .then(
         (result) => {
@@ -32,7 +32,7 @@ function Contact() {
         <div className="contact-container">
           <div className="contact-info">
             <h3>Get in Touch</h3>
-            <p>I'm always interested in hearing about new projects and job opportunities.</p>
+            <p>I'm always interested in hearing about new projects and job opportunities!</p>
             <div className="contact-details">
               <div className="contact-item">
                 <i className="fas fa-envelope"></i>

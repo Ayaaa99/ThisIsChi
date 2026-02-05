@@ -14,7 +14,7 @@ function Welcome() {
     <section className="welcome-section">
       <div className={`welcome-content ${showContent ? 'show' : ''}`}>
         <div className={`welcome-text ${showText ? 'show' : ''}`}>
-          <h1>Welcome to My Portfolio</h1>
+          <h1>Welcome to Chi's website</h1>
           <p>I'm a Full Stack Developer</p>
         </div>
         <div className="loading-bar">

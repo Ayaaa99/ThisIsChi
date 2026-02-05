@@ -9,25 +9,25 @@ function Projects() {
       id: 1,
       title: "UC Social Den",
       description: "A campus social platform for UCSD students to create, join, and engage with events.",
-      technologies: ["React", "Node.js", "MongoDB"],
-      image: "uc-social-den.jpg", // Replace with the actual image file name
-      path: "/project-one", // Match the route in App.js
+      technologies: ["React", "Node.js", "API", "MongoDB"],
+      image: "uc-social-den.jpg",
+      path: "/project-one",
     },
     {
       id: 2,
       title: "AI Taylor Swift Lyrics Generator",
-      description: "A machine learning model to generate song lyrics in Taylor Swift’s style.",
-      technologies: ["Python", "PyTorch", "GPT-2"],
-      image: "ai-lyrics-generator.jpg", // Replace with the actual image file name
-      path: "/project-two", // Match the route in App.js
+      description: "A machine learning model to generate song lyrics in Taylor Swift's style.",
+      technologies: ["Python", "PyTorch", "GPT-2", "Transformer"],
+      image: "ai-lyrics-generator.jpg",
+      path: "/project-two",
     },
     {
       id: 3,
       title: "Palm & Prophecy",
       description: "A fortune-telling website with palm reading, fortune cookies, and zodiac matching.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      image: "palm-and-prophecy.png", // Replace with the actual image file name
-      path: "/project-three", // Match the route in App.js
+      image: "palm-and-prophecy.png",
+      path: "/project-three",
     },
   ];
 
@@ -41,22 +41,20 @@ function Projects() {
       <h2>My Projects</h2>
       <div className="projects-grid">
         {projects.map(project => (
-          <div key={project.id} className="project-card">
+          <div 
+            key={project.id} 
+            className="project-card"
+            onClick={() => handleProjectClick(project.path)}
+          >
             <img src={project.image} alt="project image picture" className="project-card-image" />
             <div className="project-content">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               <div className="project-technologies">
                 {project.technologies.map((tech, index) => (
-                  <span key={index} className="tech-tag">{tech}</span>
+                  <span key={index} className="skill-tag">{tech}</span>
                 ))}
               </div>
-              <button 
-                className="project-link"
-                onClick={() => handleProjectClick(project.path)}
-              >
-                View Project
-              </button>
             </div>
           </div>
         ))}

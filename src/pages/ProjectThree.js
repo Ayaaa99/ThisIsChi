@@ -6,9 +6,6 @@ function ProjectThree() {
 
   return (
     <div className="project-page">
-      <button className="back-button" onClick={() => navigate('/')}>
-        <i className="fas fa-arrow-left"></i> Back to Portfolio
-      </button>
       
       <div className="project-content">
         <h1>Palm & Prophecy</h1>
@@ -68,6 +65,10 @@ function ProjectThree() {
           </section>
         </div>
       </div>
+
+      <button className="back-button" onClick={() => navigate('/')}>
+        <i className="fas fa-arrow-left"></i> Back to Portfolio
+      </button>
     </div>
   );
 }

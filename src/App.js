@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import ProjectOne from './pages/ProjectOne';
@@ -16,6 +17,7 @@ function MainContent() {
       <Navbar />
       <main>
         <About />
+        <Experience />
         <Projects />
         <Contact />
       </main>
@@ -60,4 +62,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;

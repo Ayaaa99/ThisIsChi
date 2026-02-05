@@ -6,9 +6,7 @@ function ProjectOne() {
 
   return (
     <div className="project-page">
-      <button className="back-button" onClick={() => navigate('/')}>
-        <i className="fas fa-arrow-left"></i> Back to Portfolio
-      </button>
+
       
       <div className="project-content">
         <h1>UC Social Den</h1>
@@ -57,6 +55,10 @@ function ProjectOne() {
           </section>
         </div>
       </div>
+
+      <button className="back-button" onClick={() => navigate('/')}>
+        <i className="fas fa-arrow-left"></i> Back to Portfolio
+      </button>
     </div>
   );
 }

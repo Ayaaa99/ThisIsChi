@@ -6,10 +6,7 @@ function ProjectTwo() {
 
   return (
     <div className="project-page">
-      <button className="back-button" onClick={() => navigate('/')}>
-        <i className="fas fa-arrow-left"></i> Back to Portfolio
-      </button>
-      
+
       <div className="project-content">
         <h1>AI Taylor Swift Lyrics Generator</h1>
         <div className="project-header">
@@ -57,6 +54,9 @@ function ProjectTwo() {
           </section>
         </div>
       </div>
+      <button className="back-button" onClick={() => navigate('/')}>
+        <i className="fas fa-arrow-left"></i> Back to Portfolio
+      </button>
     </div>
   );
 }
