@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import project_one_img from '../assets/project_one_img.png';
 
 function ProjectOne() {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ function ProjectOne() {
         <h1>UC Social Den</h1>
         <div className="project-header">
           <div className="project-image">
-            <img src="uc-social-den.jpg" alt="UC Social Den" className="project-image" />
+            <img src={project_one_img} alt="UC Social Den" className="project-image" />
           </div>
           <div className="project-overview">
             <h2>Overview</h2>
@@ -21,9 +22,10 @@ function ProjectOne() {
               It fosters student connections and supports on-campus event organization with a secure and user-friendly interface.
             </p>
             <div className="project-technologies">
-              <span className="tech-tag">React</span>
-              <span className="tech-tag">Node.js</span>
-              <span className="tech-tag">MongoDB</span>
+              <span className="skill-tag">React</span>
+              <span className="skill-tag">Node.js</span>
+              <span className="skill-tag">API</span>
+              <span className="skill-tag">MongoDB</span>
             </div>
           </div>
         </div>

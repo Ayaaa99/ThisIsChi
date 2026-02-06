@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import project_one_img from '../assets/project_one_img.png';
+
 
 function Projects() {
   const navigate = useNavigate();
@@ -10,7 +12,7 @@ function Projects() {
       title: "UC Social Den",
       description: "A campus social platform for UCSD students to create, join, and engage with events.",
       technologies: ["React", "Node.js", "API", "MongoDB"],
-      image: "uc-social-den.jpg",
+      image: project_one_img,
       path: "/project-one",
     },
     {

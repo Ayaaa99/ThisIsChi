@@ -20,9 +20,9 @@ function ProjectTwo() {
               It uses a GPT-2-like transformer to create creative and nuanced lyrics, achieving stylistic accuracy.
             </p>
             <div className="project-technologies">
-              <span className="tech-tag">Python</span>
-              <span className="tech-tag">PyTorch</span>
-              <span className="tech-tag">GPT-2</span>
+              <span className="skill-tag">Python</span>
+              <span className="skill-tag">PyTorch</span>
+              <span className="skill-tag">GPT-2</span>
             </div>
           </div>
         </div>

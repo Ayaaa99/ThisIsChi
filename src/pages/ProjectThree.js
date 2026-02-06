@@ -20,10 +20,10 @@ function ProjectThree() {
               It provides an interactive and fun experience for users, combining creative design with engaging functionality.
             </p>
             <div className="project-technologies">
-              <span className="tech-tag">HTML</span>
-              <span className="tech-tag">CSS</span>
-              <span className="tech-tag">JavaScript</span>
-              <span className="tech-tag">Figma</span>
+              <span className="skill-tag">HTML</span>
+              <span className="skill-tag">CSS</span>
+              <span className="skill-tag">JavaScript</span>
+              <span className="skill-tag">Figma</span>
             </div>
           </div>
         </div>

@@ -5,27 +5,20 @@ function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const [isVisible, setIsVisible] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isHoveringNav, setIsHoveringNav] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const viewportHeight = window.innerHeight;
-
-      if (currentScrollY > lastScrollY && currentScrollY > viewportHeight * 0.8) {
-        // Scrolling down
+    const handleMouseMove = (e) => {
+      if (e.clientY <= 50) {
         setIsVisible(true);
-      } else {
-        // Scrolling up
+      } else if (e.clientY > 100 && !isHoveringNav) {
         setIsVisible(false);
       }
-
-      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]); // Dependency array includes lastScrollY
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [isHoveringNav]);
 
   const handleNavClick = (section) => {
     if (location.pathname !== '/') {
@@ -45,10 +38,17 @@ function Navbar() {
   };
 
   return (
-    <header className={`App-header ${isVisible ? 'show' : 'hide'}`}>
+    <header 
+      className={`App-header ${isVisible ? 'show' : 'hide'}`}
+      onMouseEnter={() => setIsHoveringNav(true)}
+      onMouseLeave={() => setIsHoveringNav(false)}
+    >
       <nav className="nav-menu">
         <button className="nav-link" onClick={() => handleNavClick('about')}>
           About
+        </button>
+        <button className="nav-link" onClick={() => handleNavClick('experience')}>
+          Experience
         </button>
         <button className="nav-link" onClick={() => handleNavClick('projects')}>
           Projects
