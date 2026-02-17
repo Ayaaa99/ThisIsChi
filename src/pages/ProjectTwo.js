@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import project_two_img from '../assets/project_two_img.png';
 
 function ProjectTwo() {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ function ProjectTwo() {
         <h1>AI Taylor Swift Lyrics Generator</h1>
         <div className="project-header">
           <div className="project-image">
-            <img src="ai-lyrics-generator.jpg" alt="AI Lyrics Generator" className="project-image" />
+            <img src={project_two_img} alt="AI Lyrics Generator" className="project-image" />
           </div>
           <div className="project-overview">
             <h2>Overview</h2>
@@ -48,15 +49,22 @@ function ProjectTwo() {
 
           <section>
             <h2>Demo</h2>
+            <div className="demo-window">
+              <iframe 
+                src="https://chz011-taylor-swift-lyrics-generator.hf.space" 
+                title="Taylor Swift Lyrics Generator Demo" 
+                className="demo-iframe"
+                allowFullScreen
+              ></iframe>
+            </div>
             <p>
               Check out the project on <a href="https://github.com/Ayaaa99/AI_TSlyrics_generator" target="_blank" rel="noopener noreferrer">GitHub</a>.
             </p>
           </section>
         </div>
       </div>
-      <button className="back-button" onClick={() => navigate('/')}>
-        <i className="fas fa-arrow-left"></i> Back to Portfolio
-      </button>
+      
+      <button className="submit-btn" onClick={() => navigate('/')}>Back to Portfolio</button>
     </div>
   );
 }

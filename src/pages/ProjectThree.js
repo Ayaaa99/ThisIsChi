@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import project_three_img from '../assets/project_three_img.png';
 
 function ProjectThree() {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ function ProjectThree() {
         <h1>Palm & Prophecy</h1>
         <div className="project-header">
           <div className="project-image">
-            <img src="palm-and-prophecy.png" alt="Palm & Prophecy" className="project-image" />
+            <img src={project_three_img} alt="Palm & Prophecy" className="project-image" />
           </div>
           <div className="project-overview">
             <h2>Overview</h2>
@@ -66,9 +67,7 @@ function ProjectThree() {
         </div>
       </div>
 
-      <button className="back-button" onClick={() => navigate('/')}>
-        <i className="fas fa-arrow-left"></i> Back to Portfolio
-      </button>
+      <button className="submit-btn" onClick={() => navigate('/')}>Back to Portfolio</button>
     </div>
   );
 }

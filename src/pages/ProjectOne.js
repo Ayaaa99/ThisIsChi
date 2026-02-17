@@ -58,9 +58,7 @@ function ProjectOne() {
         </div>
       </div>
 
-      <button className="back-button" onClick={() => navigate('/')}>
-        <i className="fas fa-arrow-left"></i> Back to Portfolio
-      </button>
+      <button className="submit-btn" onClick={() => navigate('/')}>Back to Portfolio</button>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import project_one_img from '../assets/project_one_img.png';
+import project_two_img from '../assets/project_two_img.png';
+import project_three_img from '../assets/project_three_img.png';
 
 
 function Projects() {
@@ -20,7 +22,7 @@ function Projects() {
       title: "AI Taylor Swift Lyrics Generator",
       description: "A machine learning model to generate song lyrics in Taylor Swift's style.",
       technologies: ["Python", "PyTorch", "GPT-2", "Transformer"],
-      image: "ai-lyrics-generator.jpg",
+      image: project_two_img,
       path: "/project-two",
     },
     {
@@ -28,7 +30,7 @@ function Projects() {
       title: "Palm & Prophecy",
       description: "A fortune-telling website with palm reading, fortune cookies, and zodiac matching.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      image: "palm-and-prophecy.png",
+      image: project_three_img,
       path: "/project-three",
     },
   ];
