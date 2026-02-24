@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import backgroundImg from '../assets/background.png';
 
 function Welcome() {
   const [showContent, setShowContent] = useState(false);
@@ -13,20 +14,42 @@ function Welcome() {
   }, []);
 
   const lastRippleTime = useRef(0);
+  const canvasRef = useRef(null);
+
+  // Draw the background image onto the canvas once it loads
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+    const img = new Image();
+    img.src = backgroundImg; 
+    img.onload = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    };
+  }, []);
+
+  // Sample the color at the cursor position
+  const getColorAtPosition = (x, y) => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+    const pixel = ctx.getImageData(x, y, 1, 1).data; // [r, g, b, a]
+    return `rgba(${pixel[0]}, ${pixel[1]}, ${pixel[2]}, 0.6)`;
+  };
 
   const handleMouseMove = (e) => {
     const now = Date.now();
-    if (now - lastRippleTime.current < 200) return; // Limit ripple creation to every 100ms
+    if (now - lastRippleTime.current < 150) return;
     lastRippleTime.current = now;
 
     const rect = sectionRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
+    const color = getColorAtPosition(x, y); // 👈 sample color here
     const id = rippleIdRef.current++;
 
-    setRipples((prev) => [...prev, { id, x, y }]);
+    setRipples((prev) => [...prev, { id, x, y, color }]); // 👈 store color in ripple
 
-    // Remove ripple after animation completes
     setTimeout(() => {
       setRipples((prev) => prev.filter((r) => r.id !== id));
     }, 1000);
@@ -42,10 +65,14 @@ function Welcome() {
         <span
           key={ripple.id}
           className="ripple"
-          style={{ left: ripple.x, top: ripple.y }}
+          style={{
+            left: ripple.x,
+            top: ripple.y,
+            background: ripple.color, // 👈 use sampled color
+          }}
         />
       ))}
-
+      <canvas ref={canvasRef} style={{ display: 'none' }} />
       <div className={`welcome-content ${showContent ? 'show' : ''}`}>
         <div className={`welcome-text ${showText ? 'show' : ''}`}>
           <h1>Welcome to Chi's website</h1>

@@ -500,10 +500,10 @@ a.contact-item:hover {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4); /* adjust color to your theme */
+  /* background: removed — set dynamically now */
   transform: translate(-50%, -50%) scale(0);
   animation: ripple-expand 1s ease-out forwards;
-  pointer-events: none; /* so ripples don't interfere with mouse events */
+  pointer-events: none;
 }
 
 @keyframes ripple-expand {
