@@ -1,4 +1,5 @@
 import React from 'react';
+import profileImg from '../assets/profile_image.jpg';
 
 function About() {
   return (
@@ -6,7 +7,7 @@ function About() {
       <h2>About Me</h2>
       <div className="about-content">
         <div className="profile-container">
-          <img src="/profile_image.jpg" alt="Chi Zhang" className="profile-img" />
+          <img src={profileImg} alt="Chi Zhang" className="profile-img" />
           <div className="profile-text">
             <h3>Hello, I'm Chi Zhang</h3>
             <p className="title">Full Stack Developer & UIUX Designer</p>
