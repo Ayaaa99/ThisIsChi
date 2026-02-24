@@ -495,6 +495,24 @@ a.contact-item:hover {
   z-index: -1;
 }
 
+.ripple {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4); /* adjust color to your theme */
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple-expand 1s ease-out forwards;
+  pointer-events: none; /* so ripples don't interfere with mouse events */
+}
+
+@keyframes ripple-expand {
+  to {
+    transform: translate(-50%, -50%) scale(30); /* controls max ripple size */
+    opacity: 0;
+  }
+}
+
 .home-page {
   position: relative;
   width: 100%;
