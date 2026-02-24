@@ -17,6 +17,19 @@ function Experience() {
         ],
         technologies: ["React", "TypeScript", "Spring", "Material UI", "MySQL"]
     },
+    {
+        id: 2,
+        title: "Software Engineer Coordinator",
+        company: "Gistar Tech",
+        location: "San Diego, CA",
+        duration: "July 2024 – Sep 2024",
+        description: [
+        "Developed features for an internal Lab Management System using PHP, JavaScript, and MySQL",
+        "Built dashboards and real-time charts for lab metrics and revenue tracking using AJAX and Google Charts",
+        "Automated reporting workflows, saving lab managers 10–15 hours per month.",
+        ],
+        technologies: ["React", "TypeScript", "Spring", "Material UI", "MySQL"]
+    },
     ];
 
   return (
