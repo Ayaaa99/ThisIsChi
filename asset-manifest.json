@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ThisIsChi/static/css/main.bf24dea9.css",
-    "main.js": "/ThisIsChi/static/js/main.72db490b.js",
+    "main.js": "/ThisIsChi/static/js/main.75e70863.js",
     "static/media/background.png": "/ThisIsChi/static/media/background.823696403dd73a0fa8ed.png",
     "static/media/project_three_img.png": "/ThisIsChi/static/media/project_three_img.fb78d322fc777e68bba3.png",
     "static/media/project_one_img.png": "/ThisIsChi/static/media/project_one_img.eb3fdd1a718c8e4110e6.png",
@@ -9,10 +9,10 @@
     "static/media/project_two_img.png": "/ThisIsChi/static/media/project_two_img.ad041e90ca4b4ad495a4.png",
     "index.html": "/ThisIsChi/index.html",
     "main.bf24dea9.css.map": "/ThisIsChi/static/css/main.bf24dea9.css.map",
-    "main.72db490b.js.map": "/ThisIsChi/static/js/main.72db490b.js.map"
+    "main.75e70863.js.map": "/ThisIsChi/static/js/main.75e70863.js.map"
   },
   "entrypoints": [
     "static/css/main.bf24dea9.css",
-    "static/js/main.72db490b.js"
+    "static/js/main.75e70863.js"
   ]
 }
